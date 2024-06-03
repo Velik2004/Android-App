@@ -1,0 +1,325 @@
+
+/* Global !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+body{
+    overflow-x: hidden; /* Блокируем горизонтальную прокрутку */
+}
+ul {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  } 
+
+  
+.flex-container{
+    display: flex;
+}
+.header {
+    background-color: #c0caf8;
+    /* padding-bottom: 20px; */
+    height: 200px;
+    /* border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px ; */
+
+    margin-bottom: 10px;
+}
+
+.header2{
+    display: flex;
+    padding: 5px;
+    padding-top: 20px;
+
+    margin-bottom: 20px;
+    margin-left: 20px;
+   
+}
+.hero{
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 5px;
+
+    font-size: xx-large;
+    color: rgba(0, 0, 0, 0.4);
+    
+}
+
+.logo{
+ margin-left: 110px;
+}
+.logo-img{
+   width: 100px;
+   height: 60px;
+   text-align: center;
+   object-fit: cover;
+;
+   
+    
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    transition: left 0.3s ease;
+}
+
+.menu.active {
+    left: 0;
+}
+
+.menu .item {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.navbar {
+    height: 32px;
+    width: 35px;
+}
+.bar {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.menu-toggle {
+    /* cursor: pointer; */
+    transition: transform 0.3s ease; /* Добавляем плавную анимацию для сдвига */
+}
+
+.menu-toggle.active {
+    transform: translateX(250px); /* Сдвигаем кнопку вправо при активации */
+}
+
+.main-date{
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+    font-size: x-large;
+}
+.hero-cal-bar{
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+.day-type{
+    align-self: flex-end;
+
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+    font-size: x-large;
+}
+
+/* Sport LIST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.sport-section{
+    position: relative;
+    bottom: 40px;
+    
+    background-color: #fff;
+
+    border-radius: 40px;
+}
+
+.stort-list {
+    list-style-type: none;
+}
+.stort-list a{
+    display: flex;
+    align-items: center;
+}
+.list-cell{
+    display: flex;
+    align-items: center;
+}
+
+.imag{
+    width: 100px;
+    margin-right: 10px;
+
+    border-radius: 20px;
+
+
+}
+.list-cell .text{
+    text-align: center;
+
+}
+.text h2 {
+    margin: 0; /* Убираем внешние отступы у h2 */
+}
+
+.text p {
+    margin: 0; /* Убираем внешние отступы у p */
+}
+
+.stort-list .item{
+    display: flex;
+    align-items: center;
+
+    margin-left: 30px;
+    margin-bottom: 60px;
+}
+.stort-list .item:first-child{
+    padding-top: 30px;
+}
+
+/* Календарь !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.container {
+    text-align: center;
+}
+
+.calendar {
+    margin: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.days {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;  
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease;
+}
+
+.day.current-day {
+    background-color: #4862d8; /* Цвет выделения для текущего дня */
+    color: white;
+    border-radius: 50%;
+}
+
+.day:hover {
+    background-color: #eee;
+}
+
+.maps {
+    height: 400px;
+    width: 100%;
+}
+
+
+/* /////////////////// GIF  /////////////////// */
+
+
+.gif{
+    width: 100%;
+    height: 80vh;    
+    object-fit: cover;
+}
+
+
+
+
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+
+.panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -2px 0px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.panel.open {
+    transform: translateY(0);
+}
+
+.handle {
+    width: 50px;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 2.5px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.panel-content {
+    padding: 20px;
+    text-align: center;
+    height: calc(100% - 0px); 
+    overflow-y: auto;
+}
