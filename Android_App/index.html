@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой мобильный сайт</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style/style.css">
+<script>
+    // Функция для получения текущей даты и месяца
+    function getCurrentDate() {
+        var today = new Date();
+        var day = today.getDate(); // Получаем день месяца (число)
+        var month = today.toLocaleString('default', { month: 'long' }); // Получаем название месяца
+
+        // Выводим текущую дату и месяц на страницу
+        document.getElementById('currentDate').innerHTML = day + ' ' + month;
+    }
+
+    // Вызываем функцию при загрузке страницы
+    window.onload = function() {
+        getCurrentDate();
+    };
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header2">
+        <div class="container">
+            <div class="navbar">
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="close-menu" onclick="toggleMenu()">
+                    
+                </div>
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-list-li"><a href="./index.html" class="item">Главная</a></li>
+                        <li class="menu-list-li"><a href="./html/calendar.html" class="item">Календарь</a></li>
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- <div class="logo">
+            <img class="logo-img" src="/image/logo.svg" alt="logo">
+        </div> -->
+    </div>
+    <div class="hero-cal-bar flex-container">
+        <div class="item-container">
+        <h2 class="hero">Today</h2>
+        <span class="main-date" id="currentDate"></span>
+        </div>
+        <div class="day-type" id="workout-type"></div>
+    </div>
+        </header>
+        <section class="sport-section">
+            <div id="workout-container"></div>
+               
+        </section>
+        <!-- <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40660.34890317473!2d30.38840889930724!3d50.43603766624315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cebd5c2c5c69%3A0xac95e56f4da4e2c8!2z0KTRltGC0L3QtdGBINC60LvRg9CxICLQkNC80LDQt9C-0L3QutC4Ig!5e0!3m2!1sru!2sua!4v1711646973745!5m2!1sru!2sua"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        <script src="./script/script.js"></script>
+        <script src="./script/calendar.js"></script>
+    </body>
+</html>
